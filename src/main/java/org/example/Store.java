@@ -10,7 +10,6 @@ import static java.lang.System.exit;
 public class Store {
     public static void main(String[] args) {
         Shelf shelf = new Shelf();
-        Scanner scanner = new Scanner(System.in);
         new Thread(new ShopAssistant(shelf)).start();
         new Thread(new Customer(shelf)).start();
 
